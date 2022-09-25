@@ -1,0 +1,3 @@
+steps: 
+  - name: 'gcr.io/cloud-builders/gsutil'
+    args: ['cp', 'gs://us-central1-kirsch-data-pla-dd54cf32-bucket', './dags']
