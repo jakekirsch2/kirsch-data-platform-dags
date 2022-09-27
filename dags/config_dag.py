@@ -21,7 +21,7 @@ def create_dag(dag_id,
             namespace='default',
             image='us-central1-docker.pkg.dev/kirsch-data-platform/docker-repository/add-hc-pricing-data:984e509',
             name='add-hc-pricing-data',
-            cmds=['python', 'main.py', '--company', 'uhc', '--file_url', 'https://uhc-tic-mrf.azureedge.net/public-mrf/2022-09-01/2022-09-01_Bind-Benefits--Inc-_TPA_UNITEDHEALTHCARE-CHOICE-PLUS_UCQ_in-network-rates.json.gz', '--file_name', '2022-09-01_Bind-Benefits--Inc-_TPA_UNITEDHEALTHCARE-CHOICE-PLUS_UCQ_in-network-rates.json.gz']
+            cmds=['python', 'main.py', '--company', 'humana', '--file_url', 'https://developers.humana.com/Resource/DownloadPCTFile?fileType=innetwork&fileName=2022-08-25_1_in-network-rates_000000000000.csv.gz', '--file_name', 'test_2022-08-25_1_in-network-rates_000000000000.csv.gz']
         )
 
     return dag
