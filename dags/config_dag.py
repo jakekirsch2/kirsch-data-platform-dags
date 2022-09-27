@@ -32,7 +32,7 @@ for n in range(1):
     dag_id = 'add_hc_pricing'
 
     default_args = {'owner': 'airflow',
-                    'start_date': datetime(2021, 1, 1),
+                    'start_date': datetime(2022, 9, 26),
                     'catchup': False}
 
     schedule = '@daily'
