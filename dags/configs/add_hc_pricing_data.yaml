@@ -1,0 +1,16 @@
+schedule: 0 0 0 * *
+steps:
+  - name: add_hc_pricing_data
+    task_id: add_hc_pricing_data
+    image: us-central1-docker.pkg.dev/kirsch-data-platform/docker-repository/add-hc-pricing-data:latest
+    cmds:
+      - python
+      - main.py
+      - --company
+      - humana
+      - --file_url
+      - https://developers.humana.com/Resource/DownloadPCTFile?fileType=innetwork&fileName=2022-08-25_1_in-network-rates_000000000000.csv.gz
+      - --file_name
+      - 2022-08-25_1_in-network-rates_000000000000.csv.gz
+layout:
+  - add_hc_pricing_data
