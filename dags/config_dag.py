@@ -20,7 +20,6 @@ def create_dag(dag_id,
             cluster_name='us-central1-kirsch-data-pla-dd54cf32-gke',
             namespace='default',
             image='us-central1-docker.pkg.dev/kirsch-data-platform/docker-repository/add-hc-pricing-data:8b392d9',
-            gcp_conn_id='workload-identity-user',
             impersonation_chain='835000117643-compute@developer.gserviceaccount.com',
             name='add-hc-pricing-data',
             cmds=['python', 'main.py', '--company', 'humana', '--file_url', 'https://developers.humana.com/Resource/DownloadPCTFile?fileType=innetwork&fileName=2022-08-25_1_in-network-rates_000000000000.csv.gz', '--file_name', 'test_2022-08-25_1_in-network-rates_000000000000.csv.gz']
